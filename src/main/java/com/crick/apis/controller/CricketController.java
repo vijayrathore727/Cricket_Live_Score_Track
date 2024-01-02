@@ -28,12 +28,12 @@ public class CricketController {
 	        System.out.println("getting live match");
 	        return new ResponseEntity<>(this.cricketService.getLiveMatchScores(), HttpStatus.OK);
 	    }
-
+           // Get Point Table of All Match
 	    @GetMapping("/point-table")
 	    public ResponseEntity<?> getCWC2023PointTable() {
 	        return new ResponseEntity<>(this.cricketService.getCWC2023PointTable(), HttpStatus.OK);
 	    }
-
+          // Get all Match Record 
 	    @GetMapping("/allMatch")
 	    public ResponseEntity<List<Match>> getAllMatches() {
 	        return new ResponseEntity<>(this.cricketService.getAllMatches(), HttpStatus.OK);
